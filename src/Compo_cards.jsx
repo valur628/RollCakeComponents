@@ -9,47 +9,77 @@ function MediumCardItem({
   DisRate
 }) {
   return (
-    <Wrapper>
-      <Title></Title>
-      <Title></Title>
+    <WrapperDiv>
       <table>
-        <thead>
-          <tr>
-            <th rowSpan="4">
-              <img src={Picture} alt="My PIC" width="10%" height="10%"></img>
-            </th>
-            <th>{DevName}</th>
-            <th rowSpan="2">
-              <img src={Platform} alt="My PIC" width="10%" height="10%"></img>
-            </th>
-          </tr>
-          <tr>
-            <td rowSpan="2">{SoftName}</td>
-          </tr>
-          <tr>
-            <td rowSpan="2">{DisRate}</td>
-          </tr>
-          <tr>
-            <td>{Cost}</td>
-          </tr>
-        </thead>
+        <WrapperTable>
+          <thead>
+            <tr>
+              <th rowSpan="4">
+                <SoftImage>
+                  <img
+                    src={Picture}
+                    alt="My PIC"
+                    width="100%"
+                    height="100%"
+                  ></img>
+                </SoftImage>
+              </th>
+              <th>{DevName}</th>
+              <th rowSpan="2">
+                <PlatImage>
+                  <img
+                    src={Platform}
+                    alt="My PIC"
+                    width="100%"
+                    height="100%"
+                  ></img>
+                </PlatImage>
+              </th>
+            </tr>
+            <tr>
+              <td rowSpan="2">{SoftName}</td>
+            </tr>
+            <tr>
+              <td rowSpan="2">{DisRate}</td>
+            </tr>
+            <tr>
+              <td>{Cost}</td>
+            </tr>
+          </thead>
+        </WrapperTable>
       </table>
-    </Wrapper>
+    </WrapperDiv>
   );
 }
 
-const Title = styled.h2`
-  margin-bottom: 8px;
+const WrapperDiv = styled.article`
+  width: 540px;
+  height: 120px;
+  object-fit: cover;
+  border: 0px solid black;
+  border-collapse: collapse;
+  background-color: #f0f5f9;
+  border-radius: 10px;
 `;
 
-const Wrapper = styled.article`
-  border: 0px solid;
-  background-color: #f0f5f9;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 16px auto;
-  max-width: 540px;
-  max-height: 120px;
+const WrapperTable = styled.table`
+  border: 0px solid black;
+  width: 540px;
+  height: 120px;
+  object-fit: cover;
+`;
+
+const SoftImage = styled.th`
+  width: 148px;
+  height: 99px;
+  object-fit: cover;
+`;
+
+const PlatImage = styled.th`
+  float: left;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
 `;
 
 export default MediumCardItem;
