@@ -25,9 +25,6 @@ function BlogPost({ Picture, Platform, DevName, SoftName, Cost, DisRate }) {
           </tr>
         </thead>
       </table>
-      <p></p>
-      <p></p>
-      <p></p>
     </Wrapper>
   );
 }
