@@ -1,13 +1,33 @@
 import styled from "styled-components";
 
-function BlogPost({ Picture, DevName, SoftName, Cost, DisRate }) {
+function BlogPost({ Picture, Platform, DevName, SoftName, Cost, DisRate }) {
   return (
     <Wrapper>
-      <Title>{Picture}</Title>
-      <Title>{DevName}</Title>
-      <p>{SoftName}</p>
-      <p>{Cost}</p>
-      <p>{DisRate}</p>
+      <Title></Title>
+      <Title></Title>
+      <table>
+        <thead>
+          <tr>
+            <th rowSpan="4">{Picture}</th>
+            <th>{DevName}</th>
+            <th rowSpan="2">
+              <img src={Platform} alt="My PIC" width="100" height="200"></img>
+            </th>
+          </tr>
+          <tr>
+            <td rowSpan="2">{SoftName}</td>
+          </tr>
+          <tr>
+            <td rowSpan="2">{DisRate}</td>
+          </tr>
+          <tr>
+            <td>{Cost}</td>
+          </tr>
+        </thead>
+      </table>
+      <p></p>
+      <p></p>
+      <p></p>
     </Wrapper>
   );
 }

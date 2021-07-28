@@ -10,6 +10,7 @@ function App() {
         SoftName="마인크래프트"
         Cost="30,000 → 15,000"
         DisRate="50%"
+        Platform="..\pic\Steam_icon_logo.svg"
       >
         이번 포스팅에서는 Styled Components로 전역 스타일을 정의하는 방법에
         대해서 알아보겠습니다.
