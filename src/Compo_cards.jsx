@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
-function BlogPost({ Picture, Platform, DevName, SoftName, Cost, DisRate }) {
+function MediumCardItem({
+  Picture,
+  Platform,
+  DevName,
+  SoftName,
+  Cost,
+  DisRate
+}) {
   return (
     <Wrapper>
       <Title></Title>
@@ -8,10 +15,12 @@ function BlogPost({ Picture, Platform, DevName, SoftName, Cost, DisRate }) {
       <table>
         <thead>
           <tr>
-            <th rowSpan="4">{Picture}</th>
+            <th rowSpan="4">
+              <img src={Picture} alt="My PIC" width="10%" height="10%"></img>
+            </th>
             <th>{DevName}</th>
             <th rowSpan="2">
-              <img src={Platform} alt="My PIC" width="100" height="200"></img>
+              <img src={Platform} alt="My PIC" width="10%" height="10%"></img>
             </th>
           </tr>
           <tr>
@@ -43,4 +52,4 @@ const Wrapper = styled.article`
   max-height: 120px;
 `;
 
-export default BlogPost;
+export default MediumCardItem;
