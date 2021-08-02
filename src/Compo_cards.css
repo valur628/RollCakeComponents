@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "BusanBada";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BusanBada.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "BusanBada";
+  font-weight: normal;
+  font-style: normal;
+}
+
+table,
+td,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
