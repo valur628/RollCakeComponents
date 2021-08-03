@@ -6,7 +6,8 @@ function MediumCardItem({
   Platform,
   DevName,
   SoftName,
-  Cost,
+  BeforeCost,
+  AfterCost,
   DisRate
 }) {
   return (
@@ -50,7 +51,9 @@ function MediumCardItem({
           </tr>
           <tr>
             <MedCostStringTd>
-              <MedCostString>{Cost}</MedCostString>
+              <MedBeforeCostString>{BeforeCost}</MedBeforeCostString>
+              &nbsp;→&nbsp;
+              <MedAfterCostString>{AfterCost}</MedAfterCostString>
             </MedCostStringTd>
           </tr>
         </thead>
@@ -117,7 +120,15 @@ const MedCostStringTd = styled.td`
   padding-bottom: 3.5%;
 `;
 
-const MedCostString = styled.text`
+const MedBeforeCostString = styled.text`
+  border: 0px solid black;
+  text-decoration: line-through;
+  color: #f7c9c5;
+  font-weight: bold;
+  font-size: 15px;
+`;
+
+const MedAfterCostString = styled.text`
   border: 0px solid black;
   color: #e74333;
   font-weight: bold;
