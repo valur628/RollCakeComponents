@@ -19,7 +19,7 @@ function MediumCardItem({
               <MedSoftImage>
                 <img
                   src={Picture}
-                  alt="My PIC"
+                  alt="MainPicture"
                   width="100%"
                   height="100%"
                 ></img>
@@ -32,7 +32,7 @@ function MediumCardItem({
               <MedPlatImage>
                 <img
                   src={Platform}
-                  alt="My PIC"
+                  alt="MainPlatform"
                   width="40px"
                   height="40px"
                 ></img>
@@ -64,26 +64,32 @@ function MediumCardItem({
 
 const MedWrapperDiv = styled.article`
   border: 0px solid black;
-  width: 540px;
-  height: 120px;
+  width: 100%;
+  height: 100%;
+  max-width: 540px;
+  max-height: 120px;
   object-fit: cover;
   border-collapse: collapse;
   background-color: #f0f5f9;
-  border-radius: 10px;
+  border-radius: 12px;
 `;
 
 const MedWrapperTable = styled.table`
-  width: 540px;
-  height: 120px;
+  width: 100%;
+  height: 100%;
+  max-width: 540px;
+  max-height: 120px;
 `;
 
 const MedSoftImageTd = styled.td`
   width: 32%;
   vertical-align: center;
+  text-align: center;
 `;
 
 const MedSoftImage = styled.div`
-  padding-top: 3%;
+  padding-top: 6%;
+  padding-bottom: 3.7%;
   padding-left: 7%;
   width: 85%;
 `;
@@ -96,6 +102,7 @@ const MedDevStringTd = styled.td`
   vertical-align: bottom;
   font-weight: normal;
   font-style: normal;
+  padding-top: 2.5%;
 `;
 
 const MedDevString = styled.text`
@@ -117,7 +124,7 @@ const MedSoftString = styled.text`
 const MedCostStringTd = styled.td`
   width: 48%;
   vertical-align: bottom;
-  padding-bottom: 3.5%;
+  padding-bottom: 3%;
 `;
 
 const MedBeforeCostString = styled.text`
@@ -138,14 +145,13 @@ const MedAfterCostString = styled.text`
 const MedPlatImageTd = styled.td`
   width: 20%;
   height: 60%;
-  vertical-align: bottom;
   text-align: center;
+  padding-top: 2%;
 `;
 
 const MedPlatImage = styled.text`
   border: 0px solid black;
   text-align: center;
-  padding-right: 15%;
 `;
 
 const MedRateStringTd = styled.td`
@@ -158,7 +164,7 @@ const MedRateStringTd = styled.td`
 
 const MedRateString = styled.text`
   border: 0px solid black;
-  padding-right: 15%;
+  padding-right: 9%;
   font-size: 30px;
   font-weight: bold;
   font-style: normal;
