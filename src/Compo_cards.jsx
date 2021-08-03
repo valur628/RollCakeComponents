@@ -169,4 +169,174 @@ const MedRateString = styled.text`
   font-weight: bold;
   font-style: normal;
 `;
-export default MediumCardItem;
+
+export { MediumCardItem };
+
+function LargeCardItem({
+  Picture,
+  Platform,
+  DevName,
+  SoftName,
+  BeforeCost,
+  AfterCost,
+  DisRate
+}) {
+  return (
+    <LarWrapperDiv>
+      <LarWrapperTable>
+        <thead>
+          <tr>
+            <LarSoftImageTd rowSpan="2">
+              <LarSoftImage>
+                <img
+                  src={Picture}
+                  alt="MainPicture"
+                  width="100%"
+                  height="100%"
+                ></img>
+              </LarSoftImage>
+            </LarSoftImageTd>
+            <LarDevStringTd>
+              <LarDevString>{DevName}</LarDevString>
+            </LarDevStringTd>
+            <LarCostStringTd>
+              <LarBeforeCostString>{BeforeCost}</LarBeforeCostString>
+              &nbsp;→&nbsp;
+              <LarAfterCostString>{AfterCost}</LarAfterCostString>
+            </LarCostStringTd>
+            <LarPlatImageTd rowSpan="2">
+              <LarPlatImage>
+                <img
+                  src={Platform}
+                  alt="MainPlatform"
+                  width="100%"
+                  height="100%"
+                ></img>
+              </LarPlatImage>
+            </LarPlatImageTd>
+          </tr>
+          <tr>
+            <LarSoftStringTd>
+              <LarSoftString>{SoftName}</LarSoftString>
+            </LarSoftStringTd>
+            <LarRateStringTd>
+              <LarRateString>{DisRate}</LarRateString>
+            </LarRateStringTd>
+          </tr>
+        </thead>
+      </LarWrapperTable>
+    </LarWrapperDiv>
+  );
+}
+
+const LarWrapperDiv = styled.article`
+  border: 0px solid black;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  max-height: 170px;
+  object-fit: cover;
+  border-collapse: collapse;
+  background-color: #f0f5f9;
+  border-radius: 12px;
+`;
+
+const LarWrapperTable = styled.table`
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  max-height: 170px;
+`;
+
+const LarSoftImageTd = styled.td`
+  width: 20%;
+  vertical-align: center;
+  text-align: center;
+`;
+
+const LarSoftImage = styled.div`
+  border: 0px solid black;
+  vertical-align: center;
+  padding-top: 8.5%;
+  padding-bottom: 7%;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 80%;
+`;
+
+const LarDevStringTd = styled.td`
+  height: 35%;
+  width: 40%;
+  font-size: 33px;
+  color: #a9abad;
+  text-align: left;
+  vertical-align: top;
+  font-weight: normal;
+  font-style: normal;
+  padding-top: 1.7%;
+`;
+
+const LarDevString = styled.text`
+  border: 0px solid black;
+  font-weight: normal;
+  font-style: normal;
+`;
+
+const LarSoftStringTd = styled.td`
+  vertical-align: top;
+  padding-top: 0.5%;
+`;
+
+const LarSoftString = styled.text`
+  border: 0px solid black;
+  font-weight: 900;
+  font-size: 50px;
+`;
+
+const LarCostStringTd = styled.td`
+  vertical-align: top;
+  text-align: right;
+  padding-top: 1%;
+  font-size: 33px;
+`;
+
+const LarBeforeCostString = styled.text`
+  border: 0px solid black;
+  text-decoration: line-through;
+  color: #f7c9c5;
+  font-weight: bold;
+`;
+
+const LarAfterCostString = styled.text`
+  border: 0px solid black;
+  padding-right: 9%;
+  color: #e74333;
+  font-weight: bold;
+`;
+
+const LarRateStringTd = styled.td`
+  vertical-align: top;
+  text-align: right;
+`;
+
+const LarRateString = styled.text`
+  border: 0px solid black;
+  padding-right: 9%;
+  font-size: 70px;
+  font-weight: bold;
+  font-style: normal;
+`;
+
+const LarPlatImageTd = styled.td`
+  width: 12%;
+  vertical-align: center;
+  padding-left: 2%;
+  padding-right: 2%;
+`;
+
+const LarPlatImage = styled.div`
+  border: 0px solid black;
+  text-align: center;
+`;
+
+export { LargeCardItem };
