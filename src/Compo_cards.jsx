@@ -14,7 +14,7 @@ function MediumCardItem({
       <MedWrapperTable>
         <thead>
           <tr>
-            <MedSoftImageTh rowSpan="4">
+            <MedSoftImageTd rowSpan="4">
               <MedSoftImage>
                 <img
                   src={Picture}
@@ -23,35 +23,35 @@ function MediumCardItem({
                   height="100%"
                 ></img>
               </MedSoftImage>
-            </MedSoftImageTh>
-            <th>
+            </MedSoftImageTd>
+            <MedDevStringTd>
               <MedDevString>{DevName}</MedDevString>
-            </th>
-            <MedPlatImageTh rowSpan="2">
+            </MedDevStringTd>
+            <MedPlatImageTd rowSpan="2">
               <MedPlatImage>
                 <img
                   src={Platform}
                   alt="My PIC"
-                  width="100%"
-                  height="100%"
+                  width="40px"
+                  height="40px"
                 ></img>
               </MedPlatImage>
-            </MedPlatImageTh>
+            </MedPlatImageTd>
           </tr>
           <tr>
-            <td rowSpan="2">
+            <MedSoftStringTd rowSpan="2">
               <MedSoftString>{SoftName}</MedSoftString>
-            </td>
+            </MedSoftStringTd>
           </tr>
           <tr>
-            <td rowSpan="2">
+            <MedRateStringTd rowSpan="2">
               <MedRateString>{DisRate}</MedRateString>
-            </td>
+            </MedRateStringTd>
           </tr>
           <tr>
-            <td>
+            <MedCostStringTd>
               <MedCostString>{Cost}</MedCostString>
-            </td>
+            </MedCostStringTd>
           </tr>
         </thead>
       </MedWrapperTable>
@@ -60,69 +60,96 @@ function MediumCardItem({
 }
 
 const MedWrapperDiv = styled.article`
+  border: 0px solid black;
   width: 540px;
   height: 120px;
   object-fit: cover;
-  border: 0px solid black;
   border-collapse: collapse;
   background-color: #f0f5f9;
   border-radius: 10px;
 `;
 
 const MedWrapperTable = styled.table`
-  border: 1px solid black;
   width: 540px;
   height: 120px;
 `;
 
-const MedSoftImageTh = styled.th`
-  width: 168px;
-  height: 99px;
+const MedSoftImageTd = styled.td`
+  width: 32%;
+  vertical-align: center;
 `;
 
 const MedSoftImage = styled.div`
-  margin-left: 10px;
-  width: 148px;
-  height: 99px;
+  padding-top: 3%;
+  padding-left: 7%;
+  width: 85%;
 `;
 
-const MedDevString = styled.div`
-  margin-top: 5px;
+const MedDevStringTd = styled.td`
+  height: 30%;
+  font-size: 15px;
+  color: #a9abad;
+  text-align: left;
+  vertical-align: bottom;
   font-weight: normal;
   font-style: normal;
 `;
 
-const MedSoftString = styled.div``;
-
-const MedCostString = styled.div``;
-
-const MedPlatImageTh = styled.th`
-  width: 40px;
-  height: 40px;
-  display: block;
-  margin: 0px auto;
-  margin-top: 10px;
+const MedDevString = styled.text`
+  border: 0px solid black;
+  font-weight: normal;
+  font-style: normal;
 `;
 
-const MedPlatImage = styled.div`
-  margin-right: 10px;
-  width: 40px;
-  height: 40x;
+const MedSoftStringTd = styled.td`
+  vertical-align: top;
 `;
 
-const MedRateImageTh = styled.th`
-  width: 40px;
-  height: 40px;
-  display: block;
-  margin: 0px auto;
-  margin-top: 10px;
+const MedSoftString = styled.text`
+  border: 0px solid black;
+  font-weight: 900;
+  font-size: 25px;
 `;
 
-const MedRateString = styled.div`
-  margin-right: 10px;
-  width: 40px;
-  height: 40px;
-  font-size: 40px;
+const MedCostStringTd = styled.td`
+  width: 48%;
+  vertical-align: bottom;
+  padding-bottom: 3.5%;
 `;
 
+const MedCostString = styled.text`
+  border: 0px solid black;
+  color: #e74333;
+  font-weight: bold;
+  font-size: 15px;
+`;
+
+const MedPlatImageTd = styled.td`
+  width: 20%;
+  height: 60%;
+  vertical-align: bottom;
+  text-align: center;
+`;
+
+const MedPlatImage = styled.text`
+  border: 0px solid black;
+  text-align: center;
+  padding-right: 15%;
+`;
+
+const MedRateStringTd = styled.td`
+  width: 20%;
+  height: 40%;
+  vertical-align: bottom;
+  padding-bottom: 2.2%;
+  text-align: right;
+`;
+
+const MedRateString = styled.text`
+  border: 0px solid black;
+  padding-right: 15%;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+`;
 export default MediumCardItem;
