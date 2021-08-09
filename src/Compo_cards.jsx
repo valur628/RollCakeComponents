@@ -201,8 +201,8 @@ function MediumCardItem({
                 <img
                   src={Platform}
                   alt="MainPlatform"
-                  width="40px"
-                  height="40px"
+                  width="100%"
+                  height="100%"
                 ></img>
               </MedPlatImage>
             </MedPlatImageTd>
@@ -310,19 +310,18 @@ const MedAfterCostString = styled.text`
 
 const MedPlatImageTd = styled.td`
   width: 20%;
-  height: 60%;
-  text-align: center;
+  vertical-align: center;
   padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 6%;
 `;
 
-const MedPlatImage = styled.text`
+const MedPlatImage = styled.div`
   border: 0px solid black;
   text-align: center;
 `;
 
 const MedRateStringTd = styled.td`
-  width: 20%;
-  height: 40%;
   vertical-align: bottom;
   padding-bottom: 2.2%;
   text-align: right;
@@ -330,7 +329,7 @@ const MedRateStringTd = styled.td`
 
 const MedRateString = styled.text`
   border: 0px solid black;
-  padding-right: 11%;
+  padding-right: 15%;
   font-size: 30px;
   font-weight: bold;
   font-style: normal;
@@ -349,8 +348,8 @@ function SmallCardItem({ Platform, SoftName, BeforeCost, AfterCost }) {
                 <img
                   src={Platform}
                   alt="MainPlatform"
-                  width="30px"
-                  height="30px"
+                  width="100%"
+                  height="100%"
                 ></img>
               </SmaPlatImage>
             </SmaPlatImageTd>
@@ -390,13 +389,14 @@ const SmaWrapperTable = styled.table`
 
 const SmaPlatImageTd = styled.td`
   vertical-align: center;
-  width: 14%;
+  width: 11.5%;
   padding-top: 1.7%;
   padding-bottom: 0.9%;
-  padding-left: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
 `;
 
-const SmaPlatImage = styled.text`
+const SmaPlatImage = styled.div`
   border: 0px solid black;
   font-weight: normal;
   font-style: normal;
